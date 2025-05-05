@@ -30,7 +30,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/assets/i18n/en.json src/assets/i18n/es.json
+          git add src/assets/i18n/es.json src/assets/i18n/es.json
           git add src/assets/i18n/en.json src/assets/i18n/en.json
           git commit -m "chore: update translations [automated]"
           git push
