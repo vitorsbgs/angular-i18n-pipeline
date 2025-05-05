@@ -1,0 +1,32 @@
+# Compiled output
+dist/
+build/
+
+# Dependency directories
+node_modules/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Angular specific
+.angular/
+.angular-cache/
+
+# Environment files
+src/environments/environment*.ts
+
+# Generated files
+*.js
+*.d.ts
+*.js.map
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
