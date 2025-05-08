@@ -1,1 +1,16 @@
-{}
+{
+  "menu": {
+    "home": {
+      "title": "Home",
+      "subtitle": "Welcome to our site"
+    },
+    "about": {
+      "title": "About us",
+      "subtitle": "Learn more about our company"
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Talk to us"
+    }
+  }
+}
