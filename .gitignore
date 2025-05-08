@@ -26,6 +26,7 @@ src/environments/environment*.ts
 *.js
 *.d.ts
 *.js.map
+!scripts/translate-i18n.js
 
 # Miscellaneous
 .DS_Store
