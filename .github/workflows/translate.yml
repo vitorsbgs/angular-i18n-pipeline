@@ -38,4 +38,4 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add src/assets/i18n/en.json src/assets/i18n/es.json
           git commit -m "🔁 Atualização automática dos arquivos i18n" || echo "Nenhuma mudança"
-          git push
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
