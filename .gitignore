@@ -30,3 +30,5 @@ src/environments/environment*.ts
 # Miscellaneous
 .DS_Store
 Thumbs.db
+
+.env

@@ -1,36 +1,39 @@
-name: Auto Translate i18n
+name: Translate i18n JSON
 
 on:
   push:
+    branches: [main]
     paths:
       - 'src/assets/i18n/pt.json'
+      - 'scripts/translate-i18n.js'
 
 jobs:
   translate:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout código
         uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup Node.js
+      - name: Configurar Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: 18
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Instalar dependências
+        run: npm install
 
-      - name: Run i18n translation script
+      - name: Rodar script de tradução
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
         run: node scripts/translate-i18n.js
 
-      - name: Commit changes
+      - name: Commit arquivos traduzidos
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/assets/i18n/es.json src/assets/i18n/es.json
-          git add src/assets/i18n/en.json src/assets/i18n/en.json
-          git commit -m "chore: update translations [automated]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/assets/i18n/en.json src/assets/i18n/es.json
+          git commit -m "🔁 Atualização automática dos arquivos i18n" || echo "Nenhuma mudança"
           git push

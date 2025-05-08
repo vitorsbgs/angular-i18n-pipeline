@@ -1,0 +1,16 @@
+{
+    "menu": {
+        "home": {
+            "title": "Início",
+            "subtitle": "Bem-vindo ao nosso site"
+        },
+        "about": {
+            "title": "Sobre nós",
+            "subtitle": "Conheça mais sobre nossa empresa"
+        },
+        "contact": {
+            "title": "Contato",
+            "subtitle": "Fale conosco"
+        }
+    }
+}
