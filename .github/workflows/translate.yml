@@ -32,10 +32,10 @@ jobs:
 
       - name: Commit arquivos traduzidos
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           git config --global credential.helper "store --file=.git-credentials"
-          echo "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com" > .git-credentials
+          echo "https://x-access-token:${{ secrets.GH_TOKEN }}@github.com" > .git-credentials
           git add src/assets/i18n/en.json src/assets/i18n/es.json
           git commit -m "🔁 Atualização automática dos arquivos i18n" || echo "Nenhuma mudança"
           git push https://github.com/${{ github.repository }} HEAD:${{ github.ref }}
