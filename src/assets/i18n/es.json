@@ -1,16 +1,1 @@
-{
-  "menu": {
-    "home": {
-      "title": "Inicio",
-      "subtitle": "Bienvenido a nuestro sitio"
-    },
-    "about": {
-      "title": "Acerca de nosotros",
-      "subtitle": "Obtenga más información sobre nuestra empresa"
-    },
-    "contact": {
-      "title": "Contactar",
-      "subtitle": "Hable con nosotros"
-    }
-  }
-}
+{}
