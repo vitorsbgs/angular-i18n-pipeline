@@ -2,7 +2,8 @@
     "menu": {
         "home": {
             "title": "Inicio",
-            "subtitle": "Bem-vindo a nossa página inicial"
+            "subtitle": "Bem-vindo a nossa aplicação",
+            "description": "Esta é uma aplicação de exemplo para demonstrar a internacionalização."
         },
         "about": {
             "title": "Sobre nós",
