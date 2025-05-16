@@ -1,1 +1,17 @@
-{}
+{
+  "menu": {
+    "home": {
+      "title": "Home",
+      "subtitle": "Welcome to our app",
+      "description": "This is an example application to demonstrate internationalization."
+    },
+    "about": {
+      "title": "About us",
+      "subtitle": "Learn more about our company"
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Talk to us"
+    }
+  }
+}
